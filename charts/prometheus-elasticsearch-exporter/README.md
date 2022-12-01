@@ -11,14 +11,14 @@ cluster using the [Helm](https://helm.sh) package manager.
 
 - Kubernetes 1.10+
 
-## Get Repo Info
+## Get Repository Info
 
 ```console
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 ```
 
-_See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
+_See [helm repository](https://helm.sh/docs/helm/helm_repo/) for command documentation._
 
 ## Install Chart
 
@@ -63,7 +63,7 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 
 `securityContext` has been renamed to `podSecurityContext` and `securityContext.enabled` has no effect anymore. To mirror the behaviour of `securityContext.enabled=false` of 4.x unset `podSecurityContext`.
 
-```
+```console
 helm install --set podSecurityContext=null my-exporter stable/elasticsearch-exporter
 ```
 
@@ -92,7 +92,7 @@ You now need to escape the rules (see `values.yaml`) for examples.
 
 ### To 2.0.0
 
-Some Kubernetes apis used from 1.x have been deprecated. You need to update your cluster to Kubernetes 1.10+ to support new definitions used in 2.x.
+Some Kubernetes APIs used from 1.x have been deprecated. You need to update your cluster to Kubernetes 1.10+ to support new definitions used in 2.x.
 
 ## Configuration
 
